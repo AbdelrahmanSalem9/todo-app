@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# Todo App - React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple React-based Todo App that allows users to add, mark as complete, and delete tasks. The project is modular, with components structured for clarity and maintainability.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Add Tasks:** Enter a task in the input field and add it to the list.
+- **Mark as Complete:** Mark tasks as completed by clicking the check button.
+- **Delete Tasks:** Remove tasks from the list with the delete button.
+- **Task Count:** Displays the count of tasks to be completed.
 
-### `npm start`
+## File Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **`App.js`:**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+   - The main component that manages the application's state and renders `AddTask` and `TaskList` components.
+   - Handles task addition and deletion.
 
-### `npm test`
+2. **`AddTask.js`:**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   - A form component with an input field and a button to add tasks.
+   - Uses a `useRef` hook to access the input field.
 
-### `npm run build`
+3. **`TaskItem.js`:**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   - Represents a single task with options to mark as completed or delete.
+   - Uses a `useRef` hook for task manipulation (e.g., marking completed).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. **`TaskList.js`:**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   - Displays a list of tasks using `TaskItem` components.
+   - Shows the total number of tasks remaining.
 
-### `npm run eject`
+5. **Styling (CSS):**
+   - CSS files (e.g., `base.css`, `addTask.css`, `taskItem.css`, `tasklist.css`) are imported in their respective components for modular styling.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## How to Run
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone the repository:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```bash
+   git clone <repo-url>
+   cd <repo-folder>
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. Install dependencies:
 
-## Learn More
+   ```bash
+   npm install
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. Start app locally:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```bash
+   npm start
+   ```
 
-### Code Splitting
+4. Open app in your browser using default port `https://localhost:3000`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Screenshots
 
-### Analyzing the Bundle Size
+Here are some screenshots of the Todo App:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Mobile Version
 
-### Making a Progressive Web App
+![Home Page: mobile](./screenshots/homepage-mobile.png) ![Complete Task: mobile](./screenshots/finishtask-mobile.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Desktop Version
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Home Page: mobile](./screenshots/homepage-desktop.png) ![Complete Task: mobile](./screenshots/finishtask-desktop.png)
