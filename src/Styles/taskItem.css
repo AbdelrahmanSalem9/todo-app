@@ -1,0 +1,50 @@
+.task-card {
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  grid-template-areas: "title title title title title title title title title title title title title fa-check fa-trash";
+  margin-bottom: 3%;
+  padding: 2%;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.completed-task {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.task-title {
+  grid-area: title;
+}
+
+.btn {
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  height: auto;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.check-btn {
+  background-color: #b5dafc;
+  color: #4178e3;
+}
+
+.delete-btn {
+  background-color: #ffd1d1;
+  color: #f45e5e;
+}
